@@ -6,5 +6,9 @@ module cryptography.javacrypt {
     requires com.dlsc.formsfx;
 
     opens cryptography.javacrypt to javafx.fxml;
+    opens cryptography.javacrypt.controllers;
+
     exports cryptography.javacrypt;
+    exports cryptography.javacrypt.controllers;
+    exports cryptography.javacrypt.services;
 }
