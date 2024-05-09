@@ -25,11 +25,11 @@ public class HashService implements IHashingService {
     }
 
     @Override
-    public Task<String> calculateHash(String filename, String algorithm) {
+    public Task<String> getHashCalculationTask(String filepath, String algorithm) {
         return new Task<>() {
             @Override
             protected String call() throws Exception {
-                FileInputStream fileInputStream = new FileInputStream(filename);
+                FileInputStream fileInputStream = new FileInputStream(filepath);
                 FileChannel fileChannel = fileInputStream.getChannel();
                 updateProgress(0, fileChannel.size());
 

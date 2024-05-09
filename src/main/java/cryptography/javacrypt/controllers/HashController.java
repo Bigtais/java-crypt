@@ -11,6 +11,9 @@ import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+/**
+ * Controller for the hash calculation tab.
+ */
 public class HashController implements Initializable {
 
     @FXML
@@ -73,7 +76,7 @@ public class HashController implements Initializable {
             return;
         }
 
-        var task = hashingService.calculateHash(path, algorithm);
+        var task = hashingService.getHashCalculationTask(path, algorithm);
         progressBar.progressProperty().bind(task.progressProperty());
 
         task.setOnSucceeded(workerStateEvent -> {
