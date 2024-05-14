@@ -1,6 +1,8 @@
 package cryptography.javacrypt.controllers;
 
+import cryptography.javacrypt.services.AlgorithmsProviderService;
 import cryptography.javacrypt.services.HashService;
+import cryptography.javacrypt.services.IAlgorithmsProviderService;
 import cryptography.javacrypt.services.IHashingService;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -28,14 +30,17 @@ public class HashController implements Initializable {
     @FXML
     ProgressBar progressBar;
 
+    private IAlgorithmsProviderService algorithmsProviderService;
+
     private IHashingService hashingService;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         hashingService = new HashService();
+        algorithmsProviderService = new AlgorithmsProviderService();
 
         algorithmChoiceBox.getItems().addAll(
-                hashingService.getAvailableAlgorithms()
+                algorithmsProviderService.getAvailableHashingFunctions()
         );
 
         progressBar.setStyle("-fx-accent: #00cc00");

@@ -6,23 +6,9 @@ import java.io.FileInputStream;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 import java.security.MessageDigest;
-import java.security.Provider;
-import java.security.Security;
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class HashService implements IHashingService {
     private static final char[] HEX_ARRAY = "0123456789ABCDEF".toCharArray();
-
-    @Override
-    public List<String> getAvailableAlgorithms() {
-        return Arrays.stream(Security.getProviders())
-                .flatMap(provider -> provider.getServices().stream())
-                .filter(service -> "MessageDigest".equals(service.getType()))
-                .map(Provider.Service::getAlgorithm)
-                .collect(Collectors.toList());
-    }
 
     @Override
     public Task<String> getHashCalculationTask(String filepath, String algorithm) {
