@@ -1,30 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button layoutX="251.0" layoutY="332.0" mnemonicParsing="false" text="Decrypt file" />
-      <ChoiceBox layoutX="150.0" layoutY="110.0" prefWidth="150.0" />
-      <Label layoutX="22.0" layoutY="114.0" text="Decryption algorithm" />
-      <Label layoutX="23.0" layoutY="155.0" prefHeight="17.0" prefWidth="119.0" text="Decryption mode" />
-      <ChoiceBox layoutX="150.0" layoutY="151.0" prefWidth="150.0" />
-      <Label layoutX="23.0" layoutY="197.0" prefHeight="17.0" prefWidth="117.0" text="Decryption padding" />
-      <ChoiceBox layoutX="150.0" layoutY="193.0" prefWidth="150.0" />
-      <TextField layoutX="116.0" layoutY="21.0" prefHeight="25.0" prefWidth="345.0" />
-      <Button layoutX="461.0" layoutY="21.0" mnemonicParsing="false" text="..." />
-      <Label layoutX="22.0" layoutY="25.0" text="Input file path" />
-      <TextField layoutX="116.0" layoutY="60.0" prefHeight="25.0" prefWidth="345.0" />
-      <Button layoutX="461.0" layoutY="60.0" mnemonicParsing="false" text="..." />
-      <Label layoutX="22.0" layoutY="64.0" text="Output file path" />
-      <TextField layoutX="151.0" layoutY="240.0" prefHeight="25.0" prefWidth="225.0" />
-      <Label layoutX="23.0" layoutY="244.0" text="Password" />
-      <CheckBox disable="true" layoutX="23.0" layoutY="294.0" mnemonicParsing="false" text="Use custom initialisation vector" />
-      <TextField editable="false" layoutX="225.0" layoutY="290.0" />
-   </children>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptography.javacrypt.controllers.DecryptionController">
+   <Button layoutX="238.0" layoutY="295.0" mnemonicParsing="false" onAction="#onDecryptClick" text="Decrypt file"/>
+   <ChoiceBox fx:id="algorithmChoiceBox" layoutX="151.0" layoutY="95.0" prefWidth="150.0"/>
+   <Label layoutX="25.0" layoutY="99.0" text="Decryption algorithm"/>
+   <Label layoutX="25.0" layoutY="139.0" prefHeight="17.0" prefWidth="119.0" text="Decryption mode"/>
+   <ChoiceBox fx:id="decryptionModeChoiceBox" layoutX="150.0" layoutY="135.0" prefWidth="150.0"/>
+   <Label layoutX="25.0" layoutY="179.0" prefHeight="17.0" prefWidth="117.0" text="Decryption padding"/>
+   <ChoiceBox fx:id="decryptionPaddingChoiceBox" layoutX="151.0" layoutY="175.0" prefWidth="150.0"/>
+   <TextField fx:id="inputFilePathField" layoutX="116.0" layoutY="15.0" prefHeight="25.0" prefWidth="350.0"/>
+   <Button layoutX="465.0" layoutY="15.0" mnemonicParsing="false" onAction="#onSearchInputFileClick" prefHeight="25.0"
+           text="..."/>
+   <Label layoutX="25.0" layoutY="19.0" text="Input file path"/>
+   <TextField fx:id="outputFilePathField" layoutX="116.0" layoutY="55.0" prefHeight="25.0" prefWidth="350.0"/>
+   <Button layoutX="465.0" layoutY="55.0" mnemonicParsing="false" onAction="#onSearchOutputFileClick" prefHeight="25.0"
+           text="..."/>
+   <Label layoutX="25.0" layoutY="59.0" text="Output file path"/>
+   <Label layoutX="25.0" layoutY="219.0" text="Password"/>
+   <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="325.0" prefHeight="25.0" prefWidth="500.0" progress="0.0"/>
+   <PasswordField fx:id="passwordField" layoutX="151.0" layoutY="215.0" prefHeight="25.0" prefWidth="350.0"/>
+   <Label layoutX="25.0" layoutY="259.0" prefHeight="17.0" prefWidth="117.0" text="Key length"/>
+   <ChoiceBox fx:id="keyLengthChoiceBox" layoutX="151.0" layoutY="255.0" prefWidth="150.0"/>
 </AnchorPane>
