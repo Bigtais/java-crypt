@@ -11,7 +11,7 @@ If you want to build this project yourself, follow these simple steps :
 
 Notes:
 - The lib/ directory contains the bouncy castle provider that cannot be put in the jar because of signing issues. Without this directory, the application might not work correctly.
-- The executable jar is the one with the suffix "SHADED" since this project is using maven shade plugin.
+- The executable jar is the one with the suffix "shaded" since this project is using maven shade plugin.
 
 
 ## Work in progress features
