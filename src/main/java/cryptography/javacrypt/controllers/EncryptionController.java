@@ -92,7 +92,7 @@ public class EncryptionController implements Initializable {
         directoryChooser.setInitialDirectory(new File(System.getProperty("user.home")));
         File selectedFolder = directoryChooser.showDialog(progressBar.getScene().getWindow());
         if (selectedFolder != null)
-            outputFilePathField.setText(selectedFolder.getAbsolutePath() + "\\output");
+            outputFilePathField.setText(selectedFolder.getAbsolutePath() + "/output");
     }
 
     /**
