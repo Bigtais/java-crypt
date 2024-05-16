@@ -8,26 +8,23 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="375.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptography.javacrypt.controllers.DecryptionController">
-   <Button layoutX="238.0" layoutY="295.0" mnemonicParsing="false" onAction="#onDecryptClick" text="Decrypt file"/>
-   <ChoiceBox fx:id="algorithmChoiceBox" layoutX="151.0" layoutY="95.0" prefWidth="150.0"/>
-   <Label layoutX="25.0" layoutY="99.0" text="Decryption algorithm"/>
-   <Label layoutX="25.0" layoutY="139.0" prefHeight="17.0" prefWidth="119.0" text="Decryption mode"/>
-   <ChoiceBox fx:id="decryptionModeChoiceBox" layoutX="150.0" layoutY="135.0" prefWidth="150.0"/>
-   <Label layoutX="25.0" layoutY="179.0" prefHeight="17.0" prefWidth="117.0" text="Decryption padding"/>
-   <ChoiceBox fx:id="decryptionPaddingChoiceBox" layoutX="151.0" layoutY="175.0" prefWidth="150.0"/>
-   <TextField fx:id="inputFilePathField" layoutX="116.0" layoutY="15.0" prefHeight="25.0" prefWidth="350.0"/>
-   <Button layoutX="465.0" layoutY="15.0" mnemonicParsing="false" onAction="#onSearchInputFileClick" prefHeight="25.0"
-           text="..."/>
-   <Label layoutX="25.0" layoutY="19.0" text="Input file path"/>
-   <TextField fx:id="outputFilePathField" layoutX="116.0" layoutY="55.0" prefHeight="25.0" prefWidth="350.0"/>
-   <Button layoutX="465.0" layoutY="55.0" mnemonicParsing="false" onAction="#onSearchOutputFileClick" prefHeight="25.0"
-           text="..."/>
-   <Label layoutX="25.0" layoutY="59.0" text="Output file path"/>
-   <Label layoutX="25.0" layoutY="219.0" text="Password"/>
-   <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="325.0" prefHeight="25.0" prefWidth="500.0" progress="0.0"/>
-   <PasswordField fx:id="passwordField" layoutX="151.0" layoutY="215.0" prefHeight="25.0" prefWidth="350.0"/>
-   <Label layoutX="25.0" layoutY="259.0" prefHeight="17.0" prefWidth="117.0" text="Key length"/>
-   <ChoiceBox fx:id="keyLengthChoiceBox" layoutX="151.0" layoutY="255.0" prefWidth="150.0"/>
+<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="425.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cryptography.javacrypt.controllers.DecryptionController">
+   <Button layoutX="250.0" layoutY="295.0" mnemonicParsing="false" onAction="#onDecryptClick" text="Decrypt file" />
+   <ChoiceBox fx:id="algorithmChoiceBox" layoutX="200.0" layoutY="95.0" prefHeight="25.0" prefWidth="150.0" />
+   <Label layoutX="25.0" layoutY="95.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Decryption algorithm" />
+   <Label layoutX="25.0" layoutY="135.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Decryption mode" />
+   <ChoiceBox fx:id="decryptionModeChoiceBox" layoutX="200.0" layoutY="135.0" prefHeight="25.0" prefWidth="150.0" />
+   <Label layoutX="25.0" layoutY="175.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Decryption padding" />
+   <ChoiceBox fx:id="decryptionPaddingChoiceBox" layoutX="200.0" layoutY="175.0" prefHeight="25.0" prefWidth="150.0" />
+   <TextField fx:id="inputFilePathField" layoutX="200.0" layoutY="15.0" prefHeight="25.0" prefWidth="350.0" />
+   <Button layoutX="550.0" layoutY="15.0" mnemonicParsing="false" onAction="#onSearchInputFileClick" prefHeight="25.0" prefWidth="25.0" text="..." />
+   <Label layoutX="25.0" layoutY="15.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Input file path" />
+   <TextField fx:id="outputFilePathField" layoutX="200.0" layoutY="55.0" prefHeight="25.0" prefWidth="350.0" />
+   <Button layoutX="550.0" layoutY="55.0" mnemonicParsing="false" onAction="#onSearchOutputFileClick" prefHeight="25.0" prefWidth="25.0" text="..." />
+   <Label layoutX="25.0" layoutY="55.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Output file path" />
+   <Label layoutX="25.0" layoutY="215.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Password" />
+   <ProgressBar fx:id="progressBar" layoutX="25.0" layoutY="350.0" prefHeight="25.0" prefWidth="550.0" progress="0.0" />
+   <PasswordField fx:id="passwordField" layoutX="200.0" layoutY="215.0" prefHeight="25.0" prefWidth="350.0" />
+   <Label layoutX="25.0" layoutY="255.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="175.0" text="Key length" />
+   <ChoiceBox fx:id="keyLengthChoiceBox" layoutX="200.0" layoutY="255.0" prefHeight="25.0" prefWidth="150.0" />
 </AnchorPane>
