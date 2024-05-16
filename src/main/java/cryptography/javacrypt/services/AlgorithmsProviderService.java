@@ -38,7 +38,6 @@ public class AlgorithmsProviderService implements IAlgorithmsProviderService{
         encryptionModes.add("OFB");
         encryptionModes.add("CFB");
         encryptionModes.add("CTR");
-        encryptionModes.add("OCB");
 
 //        Padding modes
         paddingModes = new ArrayList<>();
