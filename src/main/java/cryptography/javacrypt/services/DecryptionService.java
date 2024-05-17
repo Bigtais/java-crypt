@@ -50,7 +50,7 @@ public class DecryptionService implements IDecryptionService{
                     cipher.init(Cipher.DECRYPT_MODE, secretKeySpec);
                 }
                 else{
-                    byte[] iv = new byte[16];
+                    byte[] iv = new byte[cipher.getBlockSize()];
                     fileInputStream.read(iv);
                     progress += 16;
                     updateProgress(progress, fileChannel.size());

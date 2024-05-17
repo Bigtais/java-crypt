@@ -45,7 +45,7 @@ public class EncryptionService implements IEncryptionService {
                     cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec);
                 }
                 else{
-                    byte[] iv = getRandomBytes(16);
+                    byte[] iv = getRandomBytes(cipher.getBlockSize());
                     IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
                     cipher.init(Cipher.ENCRYPT_MODE, secretKeySpec, ivParameterSpec);
                     fileOutputStream.write(iv);
